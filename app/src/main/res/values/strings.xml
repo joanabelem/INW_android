@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">INW</string>
+    <string name="search_title">Find users on GitHub</string>
+    <string name="username">Username</string>
+
+    <string name="details_title">Details of user</string>
+    <string name="details_name">Name</string>
+    <string name="details_email">Email</string>
+    <string name="details_followers">Followers</string>
+
+    <string name="empty">-</string>
+</resources>

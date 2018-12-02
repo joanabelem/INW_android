@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/search_title_margin_top"
+    android:layout_marginRight="@dimen/search_title_margin_top"
+    tools:context=".activities.SearchActivity"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/detailsLayout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/search_title_margin_top"
+        android:layout_marginBottom="@dimen/details_title_margin_bottom"
+        android:text="@string/details_title"
+        android:textStyle="bold"
+        android:textSize="@dimen/search_title_size"
+        android:id="@+id/title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/details_user_icon_size"
+            android:layout_height="@dimen/details_user_icon_size"
+            android:layout_marginRight="@dimen/details_user_icon_right"
+            android:layout_marginLeft="@dimen/details_user_icon_right"
+            android:background="@drawable/avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/search_layout_margin"
+            android:layout_marginRight="@dimen/search_layout_margin">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/details_users_field_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/search_title_size"
+                    android:textStyle="bold"
+                    android:text="@string/details_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/search_title_size"
+                    android:textStyle="bold"
+                    android:text="@string/empty" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/details_users_field_width"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/details_email" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/empty" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/details_followers_margin_top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/search_title_size"
+            android:textStyle="bold"
+            android:text="@string/details_followers" />
+    </LinearLayout>
+
+
+</LinearLayout>
