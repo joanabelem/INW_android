@@ -46,11 +46,13 @@ public class SearchActivity extends AppCompatActivity implements SearchView {
 
     @Override
     public void showProgress() {
+        System.out.println("show");
         spinner.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void hideProgress() {
+        System.out.println("hide");
         spinner.setVisibility(View.INVISIBLE);
     }
 

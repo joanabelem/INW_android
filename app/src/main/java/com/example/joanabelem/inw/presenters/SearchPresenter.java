@@ -43,7 +43,6 @@ public class SearchPresenter {
                 User user = response.body();
                 if(user == null) {
                     view.showMessage(context.getString(R.string.notExistUserError));
-                    view.hideProgress();
                 }else{
                     Intent intent = new Intent(context, DetailsActivity.class);
                     intent.putExtra("user", gson.toJson(user));
