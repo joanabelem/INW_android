@@ -6,7 +6,12 @@
     <string name="details_title">Details of user</string>
     <string name="details_name">Name</string>
     <string name="details_email">Email</string>
+    <string name="empty">-</string>
     <string name="details_followers">Followers</string>
 
-    <string name="empty">-</string>
+
+    <string name="notExistUserError">User not exists! Try again with other username </string>
+    <string name="emptyUserError">Please insert an username</string>
+    <string name="getUserError">Something happens, please try again</string>
+
 </resources>
