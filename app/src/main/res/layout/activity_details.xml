@@ -33,7 +33,6 @@
             android:layout_height="@dimen/details_user_icon_size"
             android:layout_marginRight="@dimen/details_user_icon_right"
             android:layout_marginLeft="@dimen/details_user_icon_right"
-            android:background="@drawable/avatar"
             android:id="@+id/userPhoto"/>
 
         <LinearLayout
@@ -90,18 +89,36 @@
         android:layout_marginTop="@dimen/details_followers_margin_top">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/search_title_size"
             android:textStyle="bold"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/details_followers_title_padding"
             android:text="@string/details_followers" />
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/details_followers_margin_bottom">
+
+            <TableLayout android:background="@drawable/followers_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/followersList">
+                <include layout="@layout/table_followers_layout"/>
+
+            </TableLayout>
+        </ScrollView>
 
         <ProgressBar
             android:id="@+id/progressBar"
-            android:layout_marginLeft="20dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="@dimen/progressive_size"
+            android:layout_height="@dimen/progressive_size"
+            android:layout_marginTop="@dimen/search_progressive_margin_left"
+            android:layout_gravity="center_horizontal"
             android:visibility="visible"/>
+
+
     </LinearLayout>
 
 

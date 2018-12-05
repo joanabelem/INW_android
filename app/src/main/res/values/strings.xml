@@ -1,17 +1,19 @@
 <resources>
+    <!-- search screen -->
     <string name="app_name">INW</string>
     <string name="search_title">Find users on GitHub</string>
     <string name="username">Username</string>
 
+    <!-- details screen -->
     <string name="details_title">Details of user</string>
     <string name="details_name">Name</string>
     <string name="details_email">Email</string>
     <string name="empty">-</string>
     <string name="details_followers">Followers</string>
 
-
+    <!-- errors -->
     <string name="notExistUserError">User not exists! Try again with other username </string>
     <string name="emptyUserError">Please insert an username</string>
-    <string name="getUserError">Something happens, please try again</string>
+    <string name="getUserError">Something happens! Please check your internet connection and try again</string>
 
 </resources>

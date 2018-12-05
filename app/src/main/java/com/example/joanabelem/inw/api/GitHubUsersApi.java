@@ -1,7 +1,7 @@
 package com.example.joanabelem.inw.api;
 import com.example.joanabelem.inw.models.User;
 
-import android.content.Context;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,8 +26,8 @@ public class GitHubUsersApi {
         call.enqueue(callback);
     }
 
-    public void getUserFollowers(String username, Callback<User> callback) {
-        Call<User> call = gitUserInterface.getUserFollowers(username);
+    public void getUserFollowers(String username, Callback<List<User>> callback) {
+        Call<List<User>> call = gitUserInterface.getUserFollowers(username);
         call.enqueue(callback);
     }
 
