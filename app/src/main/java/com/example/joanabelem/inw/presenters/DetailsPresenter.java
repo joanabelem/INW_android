@@ -6,7 +6,6 @@ import com.example.joanabelem.inw.R;
 import com.example.joanabelem.inw.api.GitHubUsersApi;
 import com.example.joanabelem.inw.models.User;
 import com.example.joanabelem.inw.views.DetailsView;
-import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -19,7 +18,6 @@ public class DetailsPresenter {
     private DetailsView view;
     private GitHubUsersApi usersApi;
     private Context context;
-    private Gson gson = new Gson();
 
     public DetailsPresenter(DetailsView view, Context context) {
         this.view = view;

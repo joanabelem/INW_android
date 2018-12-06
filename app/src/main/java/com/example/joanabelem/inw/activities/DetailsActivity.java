@@ -2,6 +2,7 @@ package com.example.joanabelem.inw.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -30,7 +31,7 @@ public class DetailsActivity extends AppCompatActivity implements DetailsView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setInit(savedInstanceState);
     }
 
@@ -55,6 +56,18 @@ public class DetailsActivity extends AppCompatActivity implements DetailsView {
         detailsPresenter.getFollowers(user.getUsername());
         
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            //on click on back button ( <-- )
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {

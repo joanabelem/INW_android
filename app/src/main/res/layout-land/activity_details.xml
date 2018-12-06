@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/search_title_margin_top"
+    android:layout_marginRight="@dimen/search_title_margin_top"
+    tools:context=".activities.SearchActivity"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/detailsLayout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/search_title_margin_top"
+        android:layout_marginBottom="@dimen/details_title_margin_bottom_land"
+        android:text="@string/details_title"
+        android:textStyle="bold"
+        android:textSize="@dimen/search_title_size"
+        android:id="@+id/title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/details_user_icon_size"
+            android:layout_height="@dimen/details_user_icon_size"
+            android:layout_marginRight="@dimen/details_user_icon_right"
+            android:layout_marginLeft="@dimen/details_user_icon_right"
+            android:id="@+id/userPhoto"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/search_layout_margin"
+            android:layout_marginRight="@dimen/search_layout_margin">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/details_users_field_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/search_title_size"
+                    android:textStyle="bold"
+                    android:text="@string/details_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/search_title_size"
+                    android:text="@string/empty"
+                    android:id="@+id/name"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/details_users_info_layout_width"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/details_users_field_width"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/details_email" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empty"
+                    android:id="@+id/email"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/details_followers_title_padding">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/details_followers_title_padding"
+                android:text="@string/details_followers" />
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="@dimen/details_followers_margin_bottom">
+
+                <TableLayout android:background="@drawable/followers_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/followersList">
+                    <include layout="@layout/table_followers_layout"/>
+
+                </TableLayout>
+            </ScrollView>
+    </LinearLayout>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/progressive_size"
+        android:layout_height="@dimen/progressive_size"
+        android:layout_marginTop="@dimen/search_progressive_margin_left"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"/>
+
+</LinearLayout>

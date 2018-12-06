@@ -1,6 +1,6 @@
 <resources>
     <!-- search screen -->
-    <string name="app_name">INW</string>
+    <string name="app_name">INW - GIT challenge</string>
     <string name="search_title">Find users on GitHub</string>
     <string name="username">Username</string>
 
